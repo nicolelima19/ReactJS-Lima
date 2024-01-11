@@ -1,4 +1,4 @@
-import LogoPrincipal from "./LogoPrincipal"
+/* 
 import Navbar from "./Navbar"
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
                 <div className="col-md-1">
                     <LogoPrincipal />
                 </div>
-                <div className="col-md-10 d-flex align-items-center">
+                <div className="col-md-11 d-flex align-items-center">
                     <Navbar />
                 </div>
             </div>
@@ -19,4 +19,4 @@ const Header = () => {
     )
 }
 
-export default Header; 
+export default Header;  */
