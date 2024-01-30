@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Navbar />
       <Carrosel />
-      <ItemListContainer  greeting={"Sitio en mantenimiento."}/>
+      <ItemListContainer />
       <Cupones />
       <Locales />
       <Novedades />
