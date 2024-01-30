@@ -1,6 +1,6 @@
 React JS Lima
 
-# React + Vite
+# Proyecto RecatJs página Burger King Uruguay.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
