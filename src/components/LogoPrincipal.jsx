@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom"
 import LogoBk from "../assets/burgerking-logo.png"
 
 const LogoPrincipal = () => {
-    return(
-        <img src={LogoBk} alt="BurgerKing" width={70} />
+    return (
+        <Link to={"/"}>
+            <img src={LogoBk} alt="BurgerKing Uruguay" width={70} />
+        </Link>
     )
 }
 

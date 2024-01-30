@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({ stock }) => {
     const [counter, setCounter] = useState(1)
     const [itemStock, setItemStock] = useState(stock)
 
@@ -16,6 +16,10 @@ const ItemCount = ({stock}) => {
         }
     }
 
+    useEffect(() => {
+        setItemStock(stock)
+    }, [stock]);
+
     const onAdd = () => {
         if (counter < itemStock) {
             setItemStock(itemStock - counter)
@@ -23,21 +27,26 @@ const ItemCount = ({stock}) => {
         }
     }
 
+    const StyleItemCount = {
+        backgroundColor: '#f18639',
+    }
+
     return (
         <>
+
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-12 d-flex justify-content-center">
                     <div className="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" className="btn btn-primary" onClick={decrementar}>-</button>
-                        <button type="button" className="btn btn-primary">{counter}</button>
-                        <button type="button" className="btn btn-primary" onClick={incrementar}>+</button>
+                        <button type="button" style={StyleItemCount} className="btn" onClick={decrementar}>-</button>
+                        <button type="button" style={StyleItemCount} className="btn">{counter}</button>
+                        <button type="button" style={StyleItemCount} className="btn" onClick={incrementar}>+</button>
                     </div>
                 </div>
             </div>
-            <div className="row my-1">
-                <div className="col-md-3">
+            <div className="row my-1 d-flex justify-content-center">
+                <div className="col-md-8">
                     <div className="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" className="btn btn-primary" onClick={onAdd}>Agregar al carrito</button>
+                        <button type="button" style={StyleItemCount} className="btn" onClick={onAdd}>Agregar al carrito</button>
                     </div>
                 </div>
             </div>
