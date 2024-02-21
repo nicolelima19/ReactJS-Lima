@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "./context/CartContext";
 import { Link } from "react-router-dom";
-import Trash from "../assets/Trash-Carrito.png"
+import Trash from "../assets/Basura-Carrito.png"
 
 const Cart = () => {
     const { cart, removeItem, clear, TotalDeProductos, SumaTotalDeProductos } = useContext(CartContext);
@@ -34,12 +34,12 @@ const Cart = () => {
                         <tbody>
                             {cart.map(product =>
                                 <tr key={product.id}>
-                                    <td><img src={product.image} alt={product.title} width={80} /></td>
-                                    <td className="">{product.title}</td>
-                                    <td>${product.price}</td>
-                                    <td>{product.quantity}</td>
-                                    <td>${product.quantity * product.price}</td>
-                                    <td><a href="#" onClick={() => {removeItem(product.id)}}><img src={Trash} alt="Eliminar del carrito" title="Eliminar del carrito." />
+                                    <td className="align-middle"><img src={product.image} alt={product.title} width={80} /></td>
+                                    <td className="align-middle">{product.title}</td>
+                                    <td className="align-middle">${product.price}</td>
+                                    <td className="align-middle">{product.quantity}</td>
+                                    <td className="align-middle">${product.quantity * product.price}</td>
+                                    <td className="align-middle"><a href="#" onClick={() => {removeItem(product.id)}}><img src={Trash} alt="Eliminar del carrito" title="Eliminar del carrito." />
                                         </a>
                                     </td>
                                 </tr>
